@@ -9,9 +9,9 @@ public class javatask {
 
 	public static void main(String[] args) {
 		//receives input from user
-    		Scanner timeDuration = new Scanner(System.in);
+    		Scanner timeObject = new Scanner(System.in);
     		System.out.print("Enter duration (hh:mm:ss): ");
-    		String timeInput = timeDuration.nextLine();
+    		String timeInput = timeObject.nextLine();
     		
 		//setting parameters for schedule method
 		int delay = 1000;
@@ -29,8 +29,8 @@ public class javatask {
     		timer.scheduleAtFixedRate(new TimerTask() {
 
         		public void run() {
-				int outputTime = setInterval();
-				System.out.println((((outputTime/(60*60)) < 10) ? "0" : "") + outputTime/(60*60) + (((outputTime/60)%60 < 10) ? ":0" : ":") + (outputTime/60)%60 + (((outputTime%60) < 10) ? ":0" : ":") + outputTime%60);
+					int outputTime = setInterval();
+					System.out.println((((outputTime/(60*60)) < 10) ? "0" : "") + outputTime/(60*60) + (((outputTime/60)%60 < 10) ? ":0" : ":") + (outputTime/60)%60 + (((outputTime%60) < 10) ? ":0" : ":") + outputTime%60);
         		}
     		}, delay, period);
 	}
