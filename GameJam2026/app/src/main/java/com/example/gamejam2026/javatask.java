@@ -2,7 +2,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Scanner;
 
-public class javatask {
+public class timerTask {
 	//initialising the timer object and interval variable
 	static int interval;
 	static Timer timer;
